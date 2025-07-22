@@ -18,3 +18,13 @@
 
   And here is the detail about [patching the executable binary.](https://lucidusdev.github.io/2025/05/28/update-zap2xml-for-new-gracenote-com/#Patching-the-exe)
 
+#### Update
+
+Due to recent changes, some new options are added:
+
+```
+-H set domain
+-h set user agent
+-v set aid
+```
+
