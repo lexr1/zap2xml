@@ -3,7 +3,7 @@
 # not for redistribution of any kind, or conversion to other languages,
 # not GPL. not for github, thank you.
 
-# modified by lexr1 2026.
+# modified by lexr1.
 # https://github.com/lexr1/zap2xml/
 
 

@@ -22,10 +22,10 @@ jobs:
 
     - name: Convert .pl to .exe
       run: |
-        pp -M sub::Util -o zap2xml.exe zap2xml2.pl
+        pp -M sub::Util -M Module::Runtime -o zap2xml.exe zap2xml2.pl
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: perl-executable
-        path: app.exe
+        name: zap2xml.exe
+        path: zap2xml.exe
