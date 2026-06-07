@@ -27,3 +27,5 @@ Due to recent changes, some new options are added:
 ```
 
 Also change the default `sleeptime` , the delay between each http call to 0.5s. 
+
+currently the compiled zap2xml.exe is a drop-in replacement of original zap2xml.exe.
