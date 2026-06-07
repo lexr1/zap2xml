@@ -14,6 +14,7 @@ jobs:
       uses: shogo82148/actions-setup-perl@v1
       with:
         distribution: 'strawberry' # Strawberry Perl comes with CPAN
+        perl-version: '5.24'
 
     - name: Install Dependencies
       run: |
