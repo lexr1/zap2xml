@@ -22,7 +22,7 @@ jobs:
 
     - name: Convert .pl to .exe
       run: |
-        pp -M sub::Util -o zap2xml.exe zap2xml2.pl
+        pp -o zap2xml.exe zap2xml2.pl
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
