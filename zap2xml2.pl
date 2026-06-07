@@ -1562,6 +1562,7 @@ sub min ($$) { $_[$_[0] > $_[1]] }
 sub HELP_MESSAGE {
 print <<END;
 zap2xml <zap2xml\@gmail.com> ($VERSION)
+w/gracenote.com update https://github.com/lexr1/zap2xml	
   -u <username>
   -p <password>
   -d <# of days> (default = $days)

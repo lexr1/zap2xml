@@ -1,30 +1,27 @@
-## zap2xml.exe binary compatible with gracenote.com
+## zap2xml.exe compatible with gracenote.com
 
 
 
-#### Include
+- zap2xml.pl
+  the original perl script for referenece.
 
-- zap2xml.zap2it.exe
+- zap2xml2.pl
 
-  this is the original `zap2xml.exe` everyone is using now, dated ~2018, on `tvlistings.zap2it.com` and stops working as `zap2it.com` moved to new `gracenote.com`. There is work around to continue with this `exe`(or keep your old current `zap2xml.exe`) , following this ["Cache Spoofing](https://lucidusdev.github.io/2025/05/28/update-zap2xml-for-new-gracenote-com/#Cache-Spoofing)" guide.
+  my modified version support new greacenote.com listing and few extra options.
 
-- zap2xml.opt.exe
+- zap2xml.exe
+  compiled windows executable from the updated *zap2xml2.pl*, available in release.
 
-  This is my modified version, uses `tvlistings.gracenote.com` as drop-in replacement for current `zap2xml.exe`. A new `-H` option is also added for future domain change:
+  
 
-  ```
-  zap2xml.exe -u user@email.com -p 1234 -H tvlistings.newweb.com ....
-  ```
-
-  And here is the detail about [patching the executable binary.](https://lucidusdev.github.io/2025/05/28/update-zap2xml-for-new-gracenote-com/#Patching-the-exe)
-
-#### Update
+#### What's new
 
 Due to recent changes, some new options are added:
 
 ```
--H set domain
+-H set domain(it's default tvlistings.gracenote.com but can be changed)
 -h set user agent
--v set aid
+-v set aid(as aid=____ in web url, default to 'orbebb')
 ```
 
+Also change the default `sleeptime` , the delay between each http call to 0.5s. 
