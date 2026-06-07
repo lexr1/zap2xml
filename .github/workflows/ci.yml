@@ -31,3 +31,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         files: zap2xml.exe
+        tag_name: 20260607
+        name: Release 20260607
+        body: "Automated release of zap2xml.exe built from zap2xml2.pl

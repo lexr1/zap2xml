@@ -2,6 +2,8 @@
 
 
 
+This is an updated version of zap2xml.exe. It's used to set TV Guide listing for [Windows Media Center](https://garyan2.github.io/win10.html). And follow [this excellent guide](https://sourceforge.net/p/epgcollector/discussion/1125945/thread/f5e3a54134/) to setup and use zap2xml.
+
 - zap2xml.pl
   the original perl script for referenece.
 
