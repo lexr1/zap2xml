@@ -25,9 +25,9 @@ jobs:
       run: |
         pp -M sub::Util -o zap2xml.exe zap2xml2.pl
 
-	- name: Create GitHub Release
-	  uses: softprops/action-gh-release@v2
-	  with:
-	    files: zap2xml.exe
-		env:
-			GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        files: zap2xml.exe
