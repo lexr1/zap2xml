@@ -23,7 +23,7 @@ jobs:
 
     - name: Convert .pl to .exe
       run: |
-        pp_autolink -M Sub::Util  -M LWP::Protocol::https -o zap2xml.exe zap2xml2.pl
+        pp -M Sub::Util  -M LWP::Protocol::https -o zap2xml.exe zap2xml2.pl
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v3
