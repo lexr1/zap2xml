@@ -12,14 +12,14 @@ jobs:
 
     - name: Setup Perl environment
       uses: shogo82148/actions-setup-perl@v1
-      #with:
-        #distribution: 'strawberry' # Strawberry Perl comes with CPAN
+      with:
+        distribution: 'strawberry' # Strawberry Perl comes with CPAN
         #perl-version: '5.24'
 
     - name: Install Dependencies
       run: |
         cpanm --installdeps .
-        cpanm PAR::Packer App::PP::Autolink
+        cpanm PAR::Packer 
 
     - name: Convert .pl to .exe
       run: |
