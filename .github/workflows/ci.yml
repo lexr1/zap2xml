@@ -26,7 +26,7 @@ jobs:
         pp -M Sub::Util  -M LWP::Protocol::https -M Mozilla::CA -M IO::Socket::SSL -M Net::SSLeay -o zap2xml.exe zap2xml2.pl
 
     - name: Create GitHub Release
-      uses: softprops/action-gh-release@v6
+      uses: softprops/action-gh-release@v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
