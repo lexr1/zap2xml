@@ -19,7 +19,7 @@ jobs:
     - name: Install Dependencies
       run: |
         cpanm --installdeps .
-        cpanm PAR::Packer 
+        cpanm PAR::Packer LWP::Protocol::https
 
     - name: Convert .pl to .exe
       run: |
