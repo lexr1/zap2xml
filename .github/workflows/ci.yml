@@ -1,0 +1,36 @@
+name: Build Perl EXE
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions: write-all
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Setup Perl environment
+      uses: shogo82148/actions-setup-perl@v1
+      with:
+        distribution: 'strawberry' # Strawberry Perl comes with CPAN
+        #perl-version: '5.24'
+
+    - name: Install Dependencies
+      run: |
+        cpanm --installdeps .
+        cpanm PAR::Packer  App::PP::Autolink
+
+    - name: Convert .pl to .exe
+      run: |
+        pp_autolink -M Sub::Util -o zap2xml.exe zap2xml2.pl
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        files: zap2xml.exe
+        tag_name: 20260610
+        name: "Release 20260610"
+        body: "Automated release of zap2xml.exe built from zap2xml2.pl"
